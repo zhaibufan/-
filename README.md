@@ -1,10 +1,13 @@
 # -
 开发中遇到的零碎知识点
+
 1. enqueue和execute的问题
+
     再用retrofit时遇到了这两个方法，其实这是okhttp中的方法，因为retrofit其实只是对于okHttp请求的一层封装，网络请求还是okHttp.
-    execute的方法是同步方法，enqueue的方法是异步方法，
+    execute的方法是同步方法，enqueue的方法是异步方法。
     
 2.Retrofit中addConverterFactory和addCallAdapterFactory区别
+
     Call<String> login( @Body User ueser);
     Observable<String> login(@Body User ueser);
     从上面可以看到，Retrofit接口的返回值分为两部分，一部分是前面的Call或者Observable，另一部分是String(或其他JsonObject、具体的Bean对象等)
@@ -12,6 +15,7 @@
     addConverterFactory影响的就是第二部分以及我们的请求参数，如上面的User
     
 3.今日头条适配相关知识点
+
     android中的dp在渲染前会将dp转为px，计算公式：
         px = density * dp;
         density = dpi / 160;
@@ -24,8 +28,13 @@
         说明：dpi就是像素密度  1920:高(px) 1080：宽(px)  
         
 4.git拉取远程分支代码
+
     git fetch origin 远程分支名x:本地分支名x
     然后在checkout到改分支
+    
+5.禁止软键盘将底部view顶上去
+
+    android:windowSoftInputMode="adjustPan|stateHidden"
 
 
 
