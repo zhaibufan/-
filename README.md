@@ -62,5 +62,9 @@
 
     https://www.jianshu.com/p/345f4d8a5cfa
 
+8.MVP
 
-
+    步骤1：UI实现View方法，引用Presenter
+    步骤2：Presenter调用Model，走Model具体逻辑
+    步骤3：Model逻辑实现，回调Presenter方法
+    步骤4：Presenter回调View，即回到UI，回调View方法
