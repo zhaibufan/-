@@ -68,3 +68,8 @@
     步骤2：Presenter调用Model，走Model具体逻辑
     步骤3：Model逻辑实现，回调Presenter方法
     步骤4：Presenter回调View，即回到UI，回调View方法
+    
+9.OkHttp实现缓存的策略
+
+    https://blog.csdn.net/wangkeke1860/article/details/52084869
+    https://www.jianshu.com/p/dbda0bb8d541
