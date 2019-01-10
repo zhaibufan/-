@@ -75,3 +75,4 @@
     https://blog.csdn.net/u010256388/article/details/68491509/
     https://blog.csdn.net/wangkeke1860/article/details/52084869
     https://www.jianshu.com/p/dbda0bb8d541
+    https://github.com/yale8848/RetrofitCache(注：如果想实现有网络时不走缓存就不要添加addNetworkInterceptor(new CacheInterceptorOnNet())拦截器)
