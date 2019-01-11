@@ -76,3 +76,7 @@
     https://blog.csdn.net/wangkeke1860/article/details/52084869
     https://www.jianshu.com/p/dbda0bb8d541
     https://github.com/yale8848/RetrofitCache(注：如果想实现有网络时不走缓存就不要添加addNetworkInterceptor(new CacheInterceptorOnNet())拦截器)
+   
+10.Glide的Target对象的使用
+
+    https://blog.csdn.net/qq_18242391/article/details/72832538
