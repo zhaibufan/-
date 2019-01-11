@@ -87,7 +87,9 @@
         1.@Query和@QueryMap:用于 @GET 方法的查询参数（Query = Url 中 ‘?’ 后面的 key-value）
         2.@Path:URL地址的缺省值
     post方法：
-        1.@Body：以 Post方式 传递 自定义数据类型 给服务器
+        1.@Body：以 Post方式 传递自定义数据类型（比如javaBean对象）给服务器（通常是将javaBean对象转化为json传递为服务器）
+                @POST("/wisdomWater/create")
+                Call<JsonObject> addWisdomWater(@Body RequestBody body);
         2.@Field & @FieldMap
                 作用：发送 Post请求 时提交请求的表单字段
                 具体使用：与 @FormUrlEncoded 注解配合使用
