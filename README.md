@@ -80,3 +80,39 @@
 10.Glide的Target对象的使用
 
     https://blog.csdn.net/qq_18242391/article/details/72832538
+    
+11.Retrofit的get方法和post方法注解的使用
+
+    get方法：
+        1.@Query和@QueryMap:用于 @GET 方法的查询参数（Query = Url 中 ‘?’ 后面的 key-value）
+        2.@Path:URL地址的缺省值
+    post方法：
+        1.@Body：以 Post方式 传递 自定义数据类型 给服务器
+        2.@Field & @FieldMap
+                作用：发送 Post请求 时提交请求的表单字段
+                具体使用：与 @FormUrlEncoded 注解配合使用
+                @POST("/form")
+                @FormUrlEncoded
+                Call<ResponseBody> testFormUrlEncoded1(@Field("username") String name, @Field("age") int age);
+                
+                @POST("/form")
+                @FormUrlEncoded
+                Call<ResponseBody> testFormUrlEncoded2(@FieldMap Map<String, Object> map);
+        3.@Part & @PartMap
+                作用：发送 Post请求 时提交请求的表单字段
+                与@Field的区别：功能相同，但携带的参数类型更加丰富，包括数据流，所以适用于 有文件上传 的场景
+                具体使用：与 @Multipart 注解配合使用
+                @POST("/form")
+                @Multipart
+                Call<ResponseBody> testFileUpload1(@Part("name") RequestBody name, @Part("age") RequestBody age, @Part MultipartBody.Part file);
+                
+                @POST("/form")
+                @Multipart
+                Call<ResponseBody> testFileUpload2(@PartMap Map<String, RequestBody> args, @Part MultipartBody.Part file);
+                
+    3.@Header & @Headers:添加请求头 &添加不固定的请求头
+    
+    详见：https://www.jianshu.com/p/a3e162261ab6
+    
+   
+        
