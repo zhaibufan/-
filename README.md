@@ -1,4 +1,4 @@
-# -
+# 零碎知识点
 开发中遇到的零碎知识点
 
 1. enqueue和execute的问题
@@ -124,6 +124,23 @@
     4.进一步了解PagerTransformer
     5.ViewPager结合CardView
     https://blog.csdn.net/u012702547/article/details/52334161
+    
+5.自定义view的一些知识点
+
+    1.canvas.drawCircle()：绘制实心圆、圆环，取决于Paint
+    2.canvas.drawArc():绘制圆弧(同理也包括实心和非实心)。一般第一个参数是RectF对象，该对象指的是圆弧对应的矩形的大小
+    3.view的渐变效果：Paint.setShader(new Shader());
+        new SweepGradient(width/2, height/2, processColorStart, processColorEnd) 扫描式渐变,一般用于弧形或圆形
+        new LinearGradient(0, 0, getWidth(), getHeight(), startColor, endColor, Shader.TileMode.MIRROR); 线性渐变
+    4.绘制图片
+        1.canvas.drawBitmap();
+        2.Bitmap bitmap = Bitmap.createBitmap();
+          BitmapShader circleImgBitmapShader = new BitmapShader(bitmap, ...)
+          paint.setShader(circleImgBitmapShader);
+          canvas.drawXXX(..., paint);
+    5.矩阵Matrix：使用矩阵进行平移 缩放 旋转等操作
+          
+        
     
    
         
