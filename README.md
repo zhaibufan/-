@@ -116,5 +116,14 @@
     
     详见：https://www.jianshu.com/p/a3e162261ab6
     
+4.ViewPager的PageTransformer属性
+
+    1.clipChildren属性:表示是否限制子控件在该容器所在的范围内，clipChildren属性配合layout_gravity属性，可以用来设置多余部分的显示位置
+    2.一个页面显示多个ViewPager的Item
+    3.初识PagerTransformer
+    4.进一步了解PagerTransformer
+    5.ViewPager结合CardView
+    https://blog.csdn.net/u012702547/article/details/52334161
+    
    
         
