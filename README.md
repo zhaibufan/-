@@ -139,6 +139,18 @@
           paint.setShader(circleImgBitmapShader);
           canvas.drawXXX(..., paint);
     5.矩阵Matrix：使用矩阵进行平移 缩放 旋转等操作
+    
+6.属性动画相关知识点
+
+    1.Interpolator:是控制动画的完成进度变化快慢的
+        加减速插值器AccelerateDecelerateInterpolator；
+        线性插值器LinearInterpolator；
+        加速插值器AccelerateInterpolator；
+        减速插值器DecelerateInterpolator；
+        弹跳效果插值器BounceInterpolator
+    2.TypeEvaluator:改变动画最终的属性值，比如颜色 位置
+        https://blog.csdn.net/l_wwbs/article/details/53388924
+    
           
         
     
