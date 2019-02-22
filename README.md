@@ -173,6 +173,17 @@
         Http和Https端口号不一样，Http是80端口，Https是443端口
         Http连接是无状态的，而Https采用Http+SSL构建可进行加密传输、身份认证的网络协议，更安全。
         Http协议建立连接的过程比Https协议快。因为Https除了Tcp三次握手，还要经过SSL握手。连接建立之后数据传输速度，二者无明显区别。
+        
+8.项目开发中途添加忽略文件
+
+    由于项目开发中途才添加忽略文件，所以本该忽略的文件肯定已经提交到远程仓库。以下步骤可以删除提交的忽略文件并添加最新忽略文件
+    git rm -r --cached .    //删除追踪状态 或者  git rm -r --cached file_path
+    git add .  //采用上面第二种方法则忽略此步骤
+    git commit -m "fixed untracked files"
+    git pull origin master //此步骤合作开发时防止冲突的 亦可以git fetch 和git rebase代替
+    git push origin master
+    
+    https://www.jianshu.com/p/34f446747a94
                     
                     
                     
