@@ -184,6 +184,14 @@
     git push origin master
     
     https://www.jianshu.com/p/34f446747a94
+    
+9.design包下的一些控件
+
+    1.AppBarLayout：继承自LinearLayout,实际上就是一个垂直分布的LinearLayout，必须作为CoordinatorLayout的直接子类,否则很多功能是无法实现的.并且AppBarLayout 必须有一个能滚动的兄第ScrollView (实现了NestedScrollView,listview不可以哦,RecyclerView可以),以此来通知AppBarLayout 何时进行滚动,兄弟View必须实现以下标识:app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                    其实相当于观察者与被观察者的关系，能滚动的兄弟ScrollView相当于被观察者，而AppBarLayout包裹的toorbar或者其它子view相当于观察者，当给滚动view设置behavior后，AppBarLayout的子View会根据根据behavor达到相应的效果
+    2.CoordinatorLayout：用来调节和控制子View的滚动，而这些子View 的具体响应动作是通过 behavior 属性来指定的，上面的AppBarLayout和能滚动的兄弟ScrollView都必须是它的子类才能达到效果    
+    3.NavigationView：侧滑菜单
+    4.BottomNavigationView：底部菜单
                     
                     
                     
