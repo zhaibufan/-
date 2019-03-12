@@ -192,6 +192,11 @@
     2.CoordinatorLayout：用来调节和控制子View的滚动，而这些子View 的具体响应动作是通过 behavior 属性来指定的，上面的AppBarLayout和能滚动的兄弟ScrollView都必须是它的子类才能达到效果    
     3.NavigationView：侧滑菜单
     4.BottomNavigationView：底部菜单
+    
+10.android:foreground属性和?android:selectableItemBackground
+
+    1.android:background是背景色，foreground是前面背景，所以可以通过设置foreground给VIew设置模糊或半透明遮罩的效果
+    2.?android:selectableItemBackground用于VIew添加点击波纹效果，一般用法android:background="?android:selectableItemBackground"或者android:foreground="?android:selectableItemBackground"
                     
                     
                     
